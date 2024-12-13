@@ -74,4 +74,4 @@ Deployed on Azure Kubernetes Service (AKS):
 Exposed the service using a LoadBalancer.
 CI/CD Pipeline Setup:
 
-### 4. onfigured a GitHub Actions CI/CD pipeline to automate the build, test, and deployment of the staff-service.
+### 4. Configured a GitHub Actions CI/CD pipeline to automate the build, test, and deployment of the staff-service.
