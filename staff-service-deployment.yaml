@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: staff-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: staff-service
+  template:
+    metadata:
+      labels:
+        app: staff-service
+    spec:
+      containers:
+        - name: staff-service
+          image: tran0507/staff-service:latest
+          ports:
+            - containerPort: 5000
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: staff-service
+spec:
+  selector:
+    app: staff-service
+  ports:
+    - port: 80
+      targetPort: 5000
+  type: LoadBalancer
